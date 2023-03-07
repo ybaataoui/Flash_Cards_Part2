@@ -43,6 +43,7 @@ GIF created with Licecap
 ## Notes
 
 Describe any challenges encountered while building the app.
+
 The challenge I faced during this project is how to insert the picture in the flash card for a specific answer.
 
 ## License
