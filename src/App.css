@@ -81,8 +81,20 @@
 
 .btn {
   background-color: rgb(214, 117, 146);
-  position:absolute;
-  margin-top: 350px;
+  margin-left: 20px;
+}
+.btn-group {
+  position: absolute;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-top: 450px;
+  align-items: flex-start;
+  
+}
+
+.btn-check {
+  margin-left: 60px;
+  background-color: rgb(116, 116, 184);
 }
 
 img{
@@ -91,7 +103,29 @@ img{
 }
 
 .back img[src=""] {
-  
   display: none;
+}
+
+.userInput {
+  position: absolute;
+  margin-top: 350px;
+}
+
+.correct-answer{
+  display: flex;
+  position: absolute;
+  margin-bottom: 370px;
+}
+
+p {
+  margin-left: 20px;
+}
+
+#wrong {
+  background-color:red;
+}
+
+#correct {
+  background-color: green;
 }
 

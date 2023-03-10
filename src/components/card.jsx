@@ -62,16 +62,36 @@ const Cards = () => {
     const [flip, setFlip] = useState(false);
     const [number, setNumber] = useState(0);
     const [color, setColor] = useState({ backgroundColor: 'white' });
-    const [brdcolor, setBordercolor] = useState({ bordercolor: 'white' });
+    const [correctAnswer, setCheckedAnswer] = useState('');
+    const [userInput, setUserInput ] = useState('');
+    const [correctNbrOfAnswers, setCorrectNumber] = useState(0);
+    console.log(userInput);
 
     //get a rundom number from based on the array length
     const randomNumber = () => setNumber(Math.floor(Math.random() * CardsValue.length));
 
-    //set the color to a random color
-    const randomColor = () => setColor({ backgroundColor: getRandomColor() });
+    const nextNumber = () => {
+        if(number == CardsValue.length - 1) {
+            setNumber(number)
+        } else {
+            setNumber(number + 1)
+        }
+    };
+
+    const prevNumber = () => {
+        if(number == 0) {
+            setNumber(0);
+        }
+        if(number > 0) {
+            setNumber(number - 1);
+        }
+        else{
+            setNumber(number);
+        }
+    };
 
     //set the color to a random color
-    const borderColor = () => setColor({ bordercolor: getRandomColor() });
+    const randomColor = () => setColor({ backgroundColor: getRandomColor() });
 
     //generate a rundom color
     const getRandomColor = () => {
@@ -83,16 +103,27 @@ const Cards = () => {
 
         return color;
     }
-    const [isVisible, setVisible] = useState(true);
 
-    const hidePicture = () => {
-        if(CardsValue[number].picture == ""){
-            setVisible(!isVisible);
+    const NumberOfCorrectAnswer = () => setCorrectNumber(number + 1);
+    const onCheckAnswer = () => {
+        if (CardsValue[number].answer != userInput) {
+            setCheckedAnswer('wrong');
+            setAnswerColor('red');
+        }
+        else {
+            setCheckedAnswer("correct");
+            NumberOfCorrectAnswer();
+            setAnswerColor('green');
         }
     }
 
     return (
         <div className="card-grid">
+            <div className="correct-answer">
+                <p>Correct Answers: {correctNbrOfAnswers}</p>
+                <p>Your input is:</p>
+                <p  id={correctAnswer}>{correctAnswer}</p>
+            </div>
             <div className={`card ${flip ? "flip" : ""}`} style={color}>
                 <div className="front"  onClick={() => setFlip(!flip)}>
                     <p>{CardsValue[number].question}</p>
@@ -104,7 +135,24 @@ const Cards = () => {
                 </div>
                 
             </div>
-            <button  className="btn" onClick={() => {randomNumber(); randomColor()}}>Next</button>
+            
+            <div className="userInput">
+                <label>Type your answer: </label>
+                <input 
+                    type='text'
+                    name="userInput"
+                    className="input"
+                    value={userInput} 
+                    onChange = {(e) => setUserInput(e.target.value)} 
+                    
+                />
+                <button  className="btn-check" onClick={() => {onCheckAnswer()}}>Check Answer</button>
+            </div>
+           <div className="btn-group">
+                <button  className="btn" onClick={() => {prevNumber()}}>Presvious</button>
+                <button  className="btn" onClick={() => {nextNumber(); randomColor()}}>Next</button>
+                <button  className="btn" onClick={() => {randomNumber(); randomColor()}}>Random</button>
+           </div>
                 
         </div>
         
