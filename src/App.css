@@ -67,7 +67,7 @@
 
 .front, .back {
   position: absolute;
-  padding:4rem
+  padding:4rem;
   
 }
 
@@ -127,5 +127,10 @@ p {
 
 #correct {
   background-color: green;
+}
+
+li {
+  display: flex;
+  text-align: justify;
 }
 
