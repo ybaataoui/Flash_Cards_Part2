@@ -1,8 +1,8 @@
-# Web Development Project 2 - *Flash Cards*
+# Web Development Project 3 - *Flash Cards Part2*
 
-Submitted by: **Yousserf Baataoui**
+Submitted by: **Youssef Baataoui**
 
-This web app: **This application was built with react and vite. The purpuse is to ask 10 questions about different countries and show the answer in the back of the flash card.**
+This web app: **This part of the application is an extend of part1 that will build features that allow users to enter an answer (with exact or fuzzy matching) and move backwards and forwards through the list of cards. **
 
 Time spent: **10** hours spent in total
 
@@ -10,31 +10,30 @@ Time spent: **10** hours spent in total
 
 The following **required** functionality is completed:
 
-- [*] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [*] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [*] **A list of card pairs is created**
-- [*] **Clicking on the card shows the corresponding component of the information pair**
-- [*] **Clicking the next button displays a random new card**
+- [*] **The user can enter their guess in a box before seeing the flipside of the card**
+- [*] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [*] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [*] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [*] Cards contains images in addition to or in place of text
-- [*] Cards have different visual styles such as color based on their category
-  - [*] *visual style implemented*
+- [*] A shuffle button is used to randomize the order of the cards
+- [*] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [*] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
-* [*] List anything else that you added to improve the site's functionality!
--The site is responsive
+* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-<img src='https://user-images.githubusercontent.com/80371588/223303880-55082143-f7f3-451f-982f-3f9899fb352b.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with Licecap 
+GIF created with ...  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -44,11 +43,9 @@ GIF created with Licecap
 
 Describe any challenges encountered while building the app.
 
-The challenge I faced during this project is how to insert the picture in the flash card for a specific answer.
-
 ## License
 
-    Copyright [2023] [Youssef Baataoui]
+    Copyright [yyyy] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -61,4 +58,3 @@ The challenge I faced during this project is how to insert the picture in the fl
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
