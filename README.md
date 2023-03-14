@@ -30,14 +30,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+![Flash_Cards_2](https://user-images.githubusercontent.com/80371588/224873352-53721cb4-f837-4c2f-9188-b97f7614b217.gif)
+
+
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+
 
 ## Notes
 
